@@ -18,4 +18,8 @@ class TestBus < MiniTest::Test
     assert_equal("Glasgow", @bus.location)
   end
 
+  def test_bus_noise
+    assert_equal("Vroom. Vroom.", @bus.bus_noise)
+  end
+
 end

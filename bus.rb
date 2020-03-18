@@ -7,4 +7,8 @@ class Bus
     @location = location
   end
 
+  def bus_noise
+    return "Vroom. Vroom."
+  end
+
 end
