@@ -22,6 +22,10 @@ class TestBus < MiniTest::Test
     assert_equal("Vroom. Vroom.", @bus.bus_noise)
   end
 
+  def test_passengers
+    assert_equal(0, @bus.passengers_size)
+  end
+
 end
 
 class TestPerson < MiniTest::Test

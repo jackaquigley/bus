@@ -5,10 +5,15 @@ class Bus
   def initialize(route, location)
     @route = route
     @location = location
+    @passengers = []
   end
 
   def bus_noise
     return "Vroom. Vroom."
+  end
+
+  def passengers_size
+    return @passengers.size
   end
 
 end
