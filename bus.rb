@@ -16,6 +16,10 @@ class Bus
     return @passengers.size
   end
 
+  def passenger_added(person)
+    @passengers.push(person)
+  end
+
 end
 
 class Person

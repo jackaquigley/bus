@@ -26,6 +26,12 @@ class TestBus < MiniTest::Test
     assert_equal(0, @bus.passengers_size)
   end
 
+  def test_passenger_added
+    @person = Person.new("Mitch", "27")
+    @bus.passenger_added("Mitch")
+    assert_equal(1, @bus.passengers_size)
+  end
+
 end
 
 class TestPerson < MiniTest::Test
