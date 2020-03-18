@@ -32,12 +32,29 @@ class TestBus < MiniTest::Test
     assert_equal(1, @bus.passengers_size)
   end
 
+  def test_passenger_removed
+    @bus = Bus.new("9", "Paisley")
+    @bus.passenger_added(@person)
+    @bus.passenger_added(@person2)
+    @bus.passenger_removed
+    assert_equal(1, @bus.passengers_size)
+  end
+
+  def test_all_removed
+    @bus = Bus.new("9", "Paisley")
+    @bus.passenger_added(@person)
+    @bus.passenger_added(@person2)
+    @bus.all_removed
+    assert_equal(0, @bus.passengers_size)
+  end
+
 end
 
 class TestPerson < MiniTest::Test
 
   def setup
     @person = Person.new("Jack", "25")
+    @person2 = Person.new("Mitch", "27")
   end
 
   def test_person_name

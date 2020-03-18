@@ -1,6 +1,6 @@
 class Bus
 
-  attr_reader :route, :location
+  attr_reader :route, :location, :passengers
 
   def initialize(route, location)
     @route = route
@@ -18,6 +18,14 @@ class Bus
 
   def passenger_added(person)
     @passengers.push(person)
+  end
+
+  def passenger_removed
+    @passengers.pop
+  end
+
+  def all_removed
+    @passengers.clear
   end
 
 end
