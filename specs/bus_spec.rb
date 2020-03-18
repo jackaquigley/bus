@@ -23,3 +23,15 @@ class TestBus < MiniTest::Test
   end
 
 end
+
+class TestPerson < MiniTest::Test
+
+  def setup
+    @person = Person.new("Jack", "25")
+  end
+
+  def test_person_name
+    assert_equal("Jack", @person.name)
+  end
+
+end
